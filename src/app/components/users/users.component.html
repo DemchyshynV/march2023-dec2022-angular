@@ -1,0 +1,9 @@
+<div>
+  <div *ngIf="user">
+    <app-user-details [user]="user"></app-user-details>
+    <hr>
+  </div>
+  <div>
+    <app-user *ngFor="let user of users" [user]="user" (liftUser)="getUser($event)"></app-user>
+  </div>
+</div>
