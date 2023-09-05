@@ -1,0 +1,9 @@
+<form [formGroup]="form" (ngSubmit)="carForUpdate?update():save()">
+  <input type="text" placeholder="brand" formControlName="brand">
+  <input type="text" placeholder="price" formControlName="price">
+  <input type="text" placeholder="year" formControlName="year">
+  <button [disabled]="form.invalid">{{carForUpdate ? 'update' : 'save'}}</button>
+  <div *ngIf="form.controls['brand'].errors && form.controls['brand'].touched">
+    {{form.controls['brand'].errors|json}}
+  </div>
+</form>
