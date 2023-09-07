@@ -1,0 +1,10 @@
+<mat-toolbar color="primary" class="tool-bar">
+  <div>Project Car</div>
+  <div *ngIf="user">
+    {{user.username}}
+  </div>
+  <div class="links" *ngIf="!user">
+    <a routerLink="auth/login">Login</a>
+    <a routerLink="auth/register">Register</a>
+  </div>
+</mat-toolbar>
